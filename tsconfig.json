@@ -1,0 +1,7 @@
+{
+	"extends": "./tsconfig-ckeditor.json",
+	"include": [
+		"src",
+		"../../typings"
+	]
+}
