@@ -6,12 +6,12 @@ import { InlineEditor as InlineEditorBase } from '@ckeditor/ckeditor5-editor-inl
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
+import { Bold, Italic, Underline, Subscript, Superscript } from '@ckeditor/ckeditor5-basic-styles';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
 import { CKBox } from '@ckeditor/ckeditor5-ckbox';
 import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
 import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, PictureEditing } from '@ckeditor/ckeditor5-image';
+import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, PictureEditing, ImageResize } from '@ckeditor/ckeditor5-image';
 import { Indent } from '@ckeditor/ckeditor5-indent';
 import { Link } from '@ckeditor/ckeditor5-link';
 import { List } from '@ckeditor/ckeditor5-list';
@@ -21,11 +21,17 @@ import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
 import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
+import { Alignment } from '@ckeditor/ckeditor5-alignment';
+import { Font } from '@ckeditor/ckeditor5-font';
 export default class InlineEditor extends InlineEditorBase {
-    static builtinPlugins: (typeof Essentials | typeof SimpleUploadAdapter | typeof Autoformat | typeof Bold | typeof Italic | typeof BlockQuote | typeof CKBox | typeof CloudServices | typeof EasyImage | typeof Heading | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof Indent | typeof Link | typeof List | typeof MediaEmbed | typeof Paragraph | typeof PasteFromOffice | typeof PictureEditing | typeof Table | typeof TableToolbar | typeof TextTransformation)[];
+    static builtinPlugins: (typeof Essentials | typeof SimpleUploadAdapter | typeof Autoformat | typeof Bold | typeof Italic | typeof BlockQuote | typeof CKBox | typeof CloudServices | typeof EasyImage | typeof Heading | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof ImageResize | typeof Indent | typeof Link | typeof List | typeof MediaEmbed | typeof Paragraph | typeof PasteFromOffice | typeof PictureEditing | typeof Table | typeof TableToolbar | typeof TextTransformation | typeof Alignment | typeof Underline | typeof Font | typeof Subscript | typeof Superscript)[];
     static defaultConfig: {
         toolbar: {
             items: string[];
+        };
+        fontSize: {
+            options: string[];
+            supportAllValues: boolean;
         };
         image: {
             toolbar: string[];
