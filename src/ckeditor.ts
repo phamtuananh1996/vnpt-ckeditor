@@ -25,12 +25,16 @@ import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 import { Alignment } from '@ckeditor/ckeditor5-alignment';
-import { Font } from '@ckeditor/ckeditor5-font';
+import { Font, FontColor, FontBackgroundColor } from '@ckeditor/ckeditor5-font';
+
+import { CKFinder } from '@ckeditor/ckeditor5-ckfinder';
+import { CKFinderUploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
 
 export default class InlineEditor extends InlineEditorBase {
 	public static override builtinPlugins = [
 		Essentials,
 		SimpleUploadAdapter,
+		CKFinderUploadAdapter,
 		Autoformat,
 		Bold,
 		Italic,
@@ -59,7 +63,10 @@ export default class InlineEditor extends InlineEditorBase {
 		Underline,
 		Font,
 		Subscript,
-		Superscript
+		Superscript,
+		CKFinder,
+		FontColor,
+    	FontBackgroundColor
 	];
 
 	public static override defaultConfig = {
@@ -67,8 +74,8 @@ export default class InlineEditor extends InlineEditorBase {
 			items: [
 				'undo', 'redo',
 				'|', 'heading', 'Alignment',
-				'|', 'bold', 'italic', 'Underline', 'fontSize', 'Subscript', 'Superscript',
-				'|', 'link', 'uploadImage', 'insertTable', 'blockQuote', 'mediaEmbed',
+				'|', 'bold', 'italic', 'Underline', 'fontSize', 'fontColor', 'fontBackgroundColor',  'Subscript', 'Superscript',
+				'|', 'link', 'ckfinder', 'insertTable', 'blockQuote', 'mediaEmbed',
 				'|', 'bulletedList', 'numberedList', 'outdent', 'indent'
 			]
 		},
@@ -97,6 +104,11 @@ export default class InlineEditor extends InlineEditorBase {
 				'mergeTableCells'
 			]
 		},
+
+		ckfinder: {
+			uploadUrl: '/ckfinder/connector?command=FileUpload&type=Files&currentFolder=/'
+		},
+
 		// This value must be kept in sync with the language defined in webpack.config.js.
 		language: 'en',
 	};
