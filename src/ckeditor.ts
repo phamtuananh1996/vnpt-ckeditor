@@ -21,7 +21,7 @@ import { List } from '@ckeditor/ckeditor5-list';
 import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
 import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
-import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
+import { Table, TableToolbar, TableColumnResize } from '@ckeditor/ckeditor5-table';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 import { Alignment } from '@ckeditor/ckeditor5-alignment';
@@ -58,6 +58,7 @@ export default class InlineEditor extends InlineEditorBase {
 		PictureEditing,
 		Table,
 		TableToolbar,
+		TableColumnResize,
 		TextTransformation,
 		Alignment,
 		Underline,

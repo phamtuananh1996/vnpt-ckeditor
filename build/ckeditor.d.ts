@@ -18,7 +18,7 @@ import { List } from '@ckeditor/ckeditor5-list';
 import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
 import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
-import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
+import { Table, TableToolbar, TableColumnResize } from '@ckeditor/ckeditor5-table';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 import { Alignment } from '@ckeditor/ckeditor5-alignment';
@@ -26,7 +26,7 @@ import { Font, FontColor, FontBackgroundColor } from '@ckeditor/ckeditor5-font';
 import { CKFinder } from '@ckeditor/ckeditor5-ckfinder';
 import { CKFinderUploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
 export default class InlineEditor extends InlineEditorBase {
-    static builtinPlugins: (typeof Essentials | typeof SimpleUploadAdapter | typeof CKFinderUploadAdapter | typeof Autoformat | typeof Bold | typeof Italic | typeof BlockQuote | typeof CKBox | typeof CloudServices | typeof EasyImage | typeof Heading | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof ImageResize | typeof Indent | typeof Link | typeof List | typeof MediaEmbed | typeof Paragraph | typeof PasteFromOffice | typeof PictureEditing | typeof Table | typeof TableToolbar | typeof TextTransformation | typeof Alignment | typeof Underline | typeof Font | typeof Subscript | typeof Superscript | typeof CKFinder | typeof FontColor | typeof FontBackgroundColor)[];
+    static builtinPlugins: (typeof Essentials | typeof SimpleUploadAdapter | typeof CKFinderUploadAdapter | typeof Autoformat | typeof Bold | typeof Italic | typeof BlockQuote | typeof CKBox | typeof CloudServices | typeof EasyImage | typeof Heading | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof ImageResize | typeof Indent | typeof Link | typeof List | typeof MediaEmbed | typeof Paragraph | typeof PasteFromOffice | typeof PictureEditing | typeof Table | typeof TableToolbar | typeof TableColumnResize | typeof TextTransformation | typeof Alignment | typeof Underline | typeof Font | typeof Subscript | typeof Superscript | typeof CKFinder | typeof FontColor | typeof FontBackgroundColor)[];
     static defaultConfig: {
         toolbar: {
             items: string[];
