@@ -1,6 +1,6 @@
 {
   "name": "vnpt-ckeditor5-build-inline",
-  "version": "1.2.5",
+  "version": "1.2.7",
   "description": "The inline editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -39,6 +39,9 @@
     "@ckeditor/ckeditor5-editor-inline": "42.0.1",
     "@ckeditor/ckeditor5-essentials": "42.0.1",
     "@ckeditor/ckeditor5-heading": "42.0.1",
+    "@ckeditor/ckeditor5-html-embed": "42.0.1",
+    "@ckeditor/ckeditor5-html-support": "42.0.1",
+    "@ckeditor/ckeditor5-source-editing": "42.0.1",
     "@ckeditor/ckeditor5-image": "42.0.1",
     "@ckeditor/ckeditor5-indent": "42.0.1",
     "@ckeditor/ckeditor5-link": "42.0.1",

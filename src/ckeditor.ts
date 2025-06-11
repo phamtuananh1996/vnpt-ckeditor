@@ -29,6 +29,9 @@ import { Font, FontColor, FontBackgroundColor } from '@ckeditor/ckeditor5-font';
 
 import { CKFinder } from '@ckeditor/ckeditor5-ckfinder';
 import { CKFinderUploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
+import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
+import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed';
+import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
 
 export default class InlineEditor extends InlineEditorBase {
 	public static override builtinPlugins = [
@@ -67,7 +70,10 @@ export default class InlineEditor extends InlineEditorBase {
 		Superscript,
 		CKFinder,
 		FontColor,
-    	FontBackgroundColor
+    	FontBackgroundColor,
+		SourceEditing,
+		HtmlEmbed,
+		GeneralHtmlSupport,
 	];
 
 	public static override defaultConfig = {
@@ -77,7 +83,7 @@ export default class InlineEditor extends InlineEditorBase {
 				'|', 'heading', 'Alignment',
 				'|', 'bold', 'italic', 'Underline', 'fontSize', 'fontColor', 'fontBackgroundColor',  'Subscript', 'Superscript',
 				'|', 'link', 'ckfinder', 'insertTable', 'blockQuote', 'mediaEmbed',
-				'|', 'bulletedList', 'numberedList', 'outdent', 'indent'
+				'|', 'bulletedList', 'numberedList', 'outdent', 'indent', 'htmlEmbed'
 			]
 		},
 		fontSize: {

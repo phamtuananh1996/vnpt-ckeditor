@@ -25,8 +25,11 @@ import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import { Font, FontColor, FontBackgroundColor } from '@ckeditor/ckeditor5-font';
 import { CKFinder } from '@ckeditor/ckeditor5-ckfinder';
 import { CKFinderUploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
+import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
+import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed';
+import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
 export default class InlineEditor extends InlineEditorBase {
-    static builtinPlugins: (typeof Essentials | typeof SimpleUploadAdapter | typeof CKFinderUploadAdapter | typeof Autoformat | typeof Bold | typeof Italic | typeof BlockQuote | typeof CKBox | typeof CloudServices | typeof EasyImage | typeof Heading | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof ImageResize | typeof Indent | typeof Link | typeof List | typeof MediaEmbed | typeof Paragraph | typeof PasteFromOffice | typeof PictureEditing | typeof Table | typeof TableToolbar | typeof TableColumnResize | typeof TextTransformation | typeof Alignment | typeof Underline | typeof Font | typeof Subscript | typeof Superscript | typeof CKFinder | typeof FontColor | typeof FontBackgroundColor)[];
+    static builtinPlugins: (typeof Essentials | typeof SimpleUploadAdapter | typeof CKFinderUploadAdapter | typeof Autoformat | typeof Bold | typeof Italic | typeof BlockQuote | typeof CKBox | typeof CloudServices | typeof EasyImage | typeof Heading | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof ImageResize | typeof Indent | typeof Link | typeof List | typeof MediaEmbed | typeof Paragraph | typeof PasteFromOffice | typeof PictureEditing | typeof Table | typeof TableToolbar | typeof TableColumnResize | typeof TextTransformation | typeof Alignment | typeof Underline | typeof Font | typeof Subscript | typeof Superscript | typeof CKFinder | typeof FontColor | typeof FontBackgroundColor | typeof SourceEditing | typeof HtmlEmbed | typeof GeneralHtmlSupport)[];
     static defaultConfig: {
         toolbar: {
             items: string[];
